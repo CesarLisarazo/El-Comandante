@@ -16,7 +16,6 @@ body
 .titulo-animado
 {
     display: flex;
-
     position: relative;
     justify-content: center;
    justify-content: center;
@@ -82,6 +81,9 @@ h1
     align-items: center;
 }
 
+
+
+
 .inicio-ricardo
 {
     display: flex;
@@ -120,19 +122,31 @@ footer
 }
 
 
-.fotos-container img
+
+
+.video-container
 {
-    width: 100%;
-    margin-bottom: 15px;
-    border: solid 4px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
 }
 
 .video-container iframe
 {
-    margin-bottom: 15px;
+    padding: 15px;
 }
 
+.carousel
+{
+padding: 20px;
 
+}
+
+nav
+{
+   background-color: aqua;
+}
 
 .name-area
 {
@@ -214,9 +228,13 @@ form
     padding-bottom: 10px;
 }
 
+.video-container iframe
+{
+    width: 500px;
+    height: 340px;
+}
 
-
-@media (min-width: 600px)
+@media (min-width: 576px)
 {   
     body{
     display: grid;
@@ -229,12 +247,7 @@ form
     
     }
    
-    .nav-bar
-    {
-        display: flex;
-        fle
-    }
-  
+
 
 form{
    display: flex;
@@ -245,13 +258,7 @@ form{
 }
 
 
-.fotos-container img
-{
-    
-    margin: 40px;
-    width: 80%;
-    border: solid 8px black;
-}
+
 
 .podcast iframe{
     margin: 3%;
@@ -262,5 +269,25 @@ form{
 {
     height: 60px;
     width: 280px;
+}
+}
+
+
+@media (min-width: 850px)
+{
+    .video-container iframe
+{
+    width: 850px;
+    height: 550px;
+}
+}
+
+
+@media (min-width: 1200px)
+{
+    .video-container iframe
+{
+    width: 1200px;
+    height: 800px;
 }
 }
