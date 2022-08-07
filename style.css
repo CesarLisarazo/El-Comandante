@@ -15,6 +15,7 @@ body
     min-height: 100vh;
 }
 
+
 .nav-bar
 {
     display: flex;
@@ -50,12 +51,12 @@ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 transition: 0.3s;
 }
 
-ul li:hover
+nav ul li:hover
 {
    width: 380px; 
 }
 
-ul li::before
+nav ul li::before
 {
     content:'';
     position: absolute;
@@ -66,12 +67,12 @@ ul li::before
     transition: 0.3s;
 }
 
-ul li:hover::before
+nav ul li:hover::before
 {
 opacity: 1;
 }
 
-ul li::after
+nav ul li::after
 {
     content:'';
     position: absolute;
@@ -86,12 +87,12 @@ ul li::after
     opacity: 0;
 }
 
-ul li:hover::after
+nav ul li:hover::after
 {
 opacity: 0.5;
 }
 
-ul li ion-icon
+nav ul li ion-icon
 {
 color:darkblue;
 font-size: 1.2em;
@@ -99,19 +100,19 @@ transition: 0.3s;
 transition-delay: 0.25s;
 }
 
-ul li:hover ion-icon
+nav ul li:hover ion-icon
 {
     transform: scale(0);
 
     transition-delay: 0s;
 }
 
-ul li span
+nav ul li span
 {
     position: absolute;
 }
 
-ul li .tittle
+nav ul li .tittle
 {
     color:rgb(4, 37, 53) ;
     font-size: 1.25em;
@@ -119,18 +120,49 @@ ul li .tittle
     transition-delay: 0s;
 }
 
-ul li:hover .tittle
+nav ul li:hover .tittle
 {
     transform: scale(1);
     transition: 0.5s;
 }
 
-h1
+header .titulo-animado
 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 75px;
+    display: flex;
+
+    position: relative;
+    justify-content: center;
+   justify-content: center;
+    
+    height: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    line-height: 50px;
+    overflow: hidden ;
+
+    padding-bottom: 40;
+
 }
 
+header .titulo-animado ul
+{
+    list-style: none;
+    padding-left: 10 px;
+animation: cambiar 10s infinite;
+}
+
+@keyframes cambiar
+{
+    0%{ margin-top: 0%;}
+    45%{margin-top: 0%;}
+    50%{margin-top:-50px;} 
+    95%{margin-top: -50px;}
+
+
+
+
+
+}
 
 
 
@@ -156,19 +188,20 @@ h1
 }
 
 .descripcion{
-    background-color:rgb(9, 221, 221) ;
-    padding-top: 15px;
+    background-color:rgb(9, 221, 221, .95) ;
+    padding: 15px;
     font-family: Calibri;
     border: 1px solid rgb(1, 99, 138);
 }
 
 .main{
     grid-area: main;
+    justify-content: center;
 }
 
 footer 
 {
-    height: 40px;
+    height: 50px;
     grid-area: footer;
     margin-top: 15px;
     border: 1px solid rgb(1, 99, 138);;
@@ -180,6 +213,8 @@ footer
 .biografia
 {
     font-family: calibri;
+    font-size: larger;
+    background: rgb(255, 255, 255, .5);
 }
 
 
@@ -192,8 +227,9 @@ footer
 
 
 
-
-
+.descripcion
+{grid-area:descripcion;
+}
 .name-area
 {
     grid-area: name-input;
@@ -274,11 +310,13 @@ form
     padding-bottom: 10px;
 }
 
-
+.inicio-ricardo
+{
+    grid-area: inicio-ricardo;
+}
 
 @media (min-width: 660px)
 {   
-  
 
  .nav-bar
  {
@@ -299,7 +337,7 @@ width: 80px;
     
     
 
-    ul li:hover
+   nav ul li:hover
     {
        width: 180px; 
     }
@@ -341,5 +379,22 @@ form{
 {
     height: 60px;
     width: 280px;
+
+
 }
 }
+
+@media (min-width: 1330px)
+  {
+#main
+{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "descripcion  inicio-ricardo"
+    "footer footer";
+    grid-template-columns: 200px 1000px;
+    column-gap: 100px;
+  
+}
+  }
