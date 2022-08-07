@@ -1,0 +1,266 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+body
+{
+ 
+    background-image: url(https://img.freepik.com/foto-gratis/textura-turquesa_95678-57.jpg) ;
+   
+
+}
+
+.titulo-animado
+{
+    display: flex;
+
+    position: relative;
+    justify-content: center;
+   justify-content: center;
+    
+    height: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    line-height: 50px;
+    overflow: hidden ;
+
+    padding-bottom: 40;
+
+}
+
+.titulo-animado ol
+{
+    list-style: none;
+    padding-left: 10 px;
+animation: cambiar 10s infinite;
+}
+
+@keyframes cambiar
+{
+    0%{ margin-top: 0%;}
+    45%{margin-top: 0%;}
+    50%{margin-top:-50px;} 
+    95%{margin-top: -50px;}
+
+
+
+
+
+}
+
+h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75px;
+}
+
+
+
+#main
+{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+
+.header
+{
+  grid-area: header;  
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.encabezado-Ricardo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inicio-ricardo
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    border-radius: 15%;
+}
+
+.descripcion{
+    background-color:rgb(9, 221, 221) ;
+    padding: 15px;
+    font-family: Calibri;
+    border: 1px solid rgb(1, 99, 138);
+}
+
+.main{
+    grid-area: main;
+}
+
+footer 
+{
+    height: 70px;
+    grid-area: footer;
+
+    border: 1px solid rgb(1, 99, 138);;
+    
+    background-color: rgb(9, 221, 221);
+}
+
+
+.biografia
+{
+    font-family: calibri;
+}
+
+
+.fotos-container img
+{
+    width: 100%;
+    margin-bottom: 15px;
+    border: solid 4px black;
+}
+
+.video-container iframe
+{
+    margin-bottom: 15px;
+}
+
+
+
+.name-area
+{
+    grid-area: name-input;
+    display: grid;
+    margin-top: 10px;
+    border: 1px solid rgb(1, 99, 138);
+    background-color:rgb(9, 221, 221) ;
+    padding: 15px;
+    
+}
+.email-area
+{
+    grid-area: email-input;
+    display: grid;
+    margin-top: 10px;
+    border: 1px solid rgb(1, 99, 138);
+    background-color: rgb(9, 221, 221) ;
+    padding: 15px;
+    
+}
+.age-area
+{
+    grid-area: age-area;
+    border: 1px solid rgb(1, 99, 138);
+    background-color: rgb(9, 221, 221) ;
+    padding: 15px;
+}
+
+
+.sex-area
+{
+    grid-area: sex-area;
+    border: 1px solid rgb(1, 99, 138);
+    background-color: rgb(9, 221, 221) ;
+    padding: 15px;
+}
+
+.message-area
+{
+    grid-area: message-area;
+    border: 1px solid rgb(1, 99, 138);
+    background-color: rgb(9, 221, 221) ;
+    padding-top: 15px;
+    display: grid;
+}
+
+.tittle-form
+{
+    padding: 20px;
+    background-color: rgb(9, 221, 221);
+    border: 1px solid rgb(1, 99, 138);
+    border-bottom: none;
+}
+
+form
+{
+    padding: 20px;
+    background-color: rgb(9, 221, 221);
+    border: 1px solid rgb(1, 99, 138);
+    display: grid;
+    justify-content: center;
+    gap:30px;
+    grid-template-areas:
+    "name-input    name-input"
+    "email-input email-input"
+    "age-area     sex-area"
+    "message-area message-area";
+}
+
+
+.message-area textarea
+{
+    height: 60px;
+}
+
+.message-area label
+{
+    padding-bottom: 10px;
+}
+
+
+
+@media (min-width: 600px)
+{   
+    body{
+    display: grid;
+    grid-template-areas : 
+    "header header"
+    "nav-bar nav-bar"
+    "main main"
+    "footer footer";
+    grid-template-columns: 1fr 7fr;
+    
+    }
+   
+    .nav-bar
+    {
+        display: flex;
+        fle
+    }
+  
+
+form{
+   display: flex;
+   flex-wrap: wrap;
+   align-items:baseline;
+   justify-content: space-around;
+
+}
+
+
+.fotos-container img
+{
+    
+    margin: 40px;
+    width: 80%;
+    border: solid 8px black;
+}
+
+.podcast iframe{
+    margin: 3%;
+    width: 95%;
+}
+
+.message-area textarea
+{
+    height: 60px;
+    width: 280px;
+}
+}
