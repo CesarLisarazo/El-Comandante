@@ -180,11 +180,14 @@ footer
 }
 
 
-.biografia
-{
+.biografia 
+{   
+    display: flex;
     font-family: calibri;
     font-size: larger;
     background: rgb(255, 255, 255, .5);
+    text-align: left;
+    padding: 10px;
 }
 
 
