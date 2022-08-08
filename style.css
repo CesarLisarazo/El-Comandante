@@ -48,7 +48,8 @@ body
 header
 {
     width:100%;
-    font-family: san-serif;
+    font-family: calibri;
+    font-size: larger;
 }
 
 
@@ -70,7 +71,6 @@ header Label:hover
     cursor:pointer;
     background:rgba(0,0,0,0.3);  
 }
-
 
 .menu ul
 {
@@ -114,7 +114,7 @@ header Label:hover
         position: absolute;
         width: 50%;
         margin-left: -60%;
-        transition: all 0.5s;
+        transition: all 0.3s;
     }
 
     .menu ul
@@ -137,7 +137,7 @@ header Label:hover
 {
     background-image: url(./images/Ricardo-trans.png);
     background-size: 35px;
-    margin-bottom: 10px;
+    margin: 10px 10px;
 }
 
 .header
