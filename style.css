@@ -137,7 +137,7 @@ header Label:hover
 {
     background-image: url(./images/Ricardo-trans.png);
     background-size: 35px;
-    margin: 10px 10px;
+   
 }
 
 .header
@@ -166,6 +166,7 @@ header Label:hover
 {
     grid-area: main;
     justify-content: center;
+    margin-top: 10px ;
 }
 
 footer 
