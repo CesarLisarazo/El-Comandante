@@ -16,139 +16,25 @@ body
 }
 
 
-.nav-bar
+.titulo-animado
 {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding:15px;
-}
-
-
-.nav-links
-{
- 
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px 
-}
-nav ul li
-{
-position: relative;
-justify-content: center;
-list-style: none;
-width: 350px;
-height: 50px;
-background: rgb(33, 213, 226);
-border: solid 1px rgb(3, 131, 170);
-border-radius: 50px;
-cursor: pointer;
-display: flex;
-align-items: center;
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-transition: 0.3s;
-}
-
-nav ul li:hover
-{
-   width: 380px; 
-}
-
-nav ul li::before
-{
-    content:'';
-    position: absolute;
-    inset:0;
-    border-radius:60px;
-    background:linear-gradient(45deg,var(--i), var(--j));
-    opacity: 0;
-    transition: 0.3s;
-}
-
-nav ul li:hover::before
-{
-opacity: 1;
-}
-
-nav ul li::after
-{
-    content:'';
-    position: absolute;
-    top:10px ;
-    width: 100%;
-    height: 100%;
-    border-radius: 60px;
-    background:linear-gradient(45deg,var(--i), var(--j));
-    transition: 0.3s;
-    filter: blur(15px);
-    z-index: -1;
-    opacity: 0;
-}
-
-nav ul li:hover::after
-{
-opacity: 0.5;
-}
-
-nav ul li ion-icon
-{
-color:darkblue;
-font-size: 1.2em;
-transition: 0.3s;
-transition-delay: 0.25s;
-}
-
-nav ul li:hover ion-icon
-{
-    transform: scale(0);
-
-    transition-delay: 0s;
-}
-
-nav ul li span
-{
-    position: absolute;
-}
-
-nav ul li .tittle
-{
-    color:rgb(4, 37, 53) ;
-    font-size: 1.25em;
-    transform: scale(0);
-    transition-delay: 0s;
-}
-
-nav ul li:hover .tittle
-{
-    transform: scale(1);
-    transition: 0.5s;
-}
-
-header .titulo-animado
-{
-    display: flex;
-
     position: relative;
     justify-content: center;
-   justify-content: center;
-    
+    justify-content: center;
     height: 50px;
     color: rgb(0, 0, 0);
     font-size: 50px;
     line-height: 50px;
     overflow: hidden ;
-
     padding-bottom: 40;
-
 }
 
-header .titulo-animado ul
+.titulo-animado ul
 {
     list-style: none;
     padding-left: 10 px;
-animation: cambiar 10s infinite;
+    animation: cambiar 10s infinite;
 }
 
 @keyframes cambiar
@@ -157,15 +43,95 @@ animation: cambiar 10s infinite;
     45%{margin-top: 0%;}
     50%{margin-top:-50px;} 
     95%{margin-top: -50px;}
+}
 
-
-
-
-
+header
+{
+    width:100%;
+    font-family: san-serif;
 }
 
 
+#btn-menu
+{
+  display: none;
+}
 
+header label 
+{
+    display: none;
+    width:50px;
+    height:50px;
+    border:1px solid rgb(228, 229, 240, 0.3);
+}
+
+header Label:hover
+{
+    cursor:pointer;
+    background:rgba(0,0,0,0.3);  
+}
+
+
+.menu ul
+{
+    background-color: rgb(10, 186, 209);
+    margin:0;
+    list-style:none;
+    padding:0;
+    display: flex;
+}
+
+
+.menu li
+{
+    border-right: 1px solid rgb(153, 231, 255);
+}
+
+
+.menu li:hover
+{
+  background:rgba(0,0,0,0.3);
+}
+
+.menu li a
+{
+    display: block;
+    padding: 15px 20px;
+    color: rgb(240, 253, 255);
+    text-decoration: none;
+}
+
+@media (max-width:768px)
+{
+    header label
+    {
+        display: block;
+        background-color: rgb(10, 186, 209);
+    }
+
+    .menu
+    {
+        position: absolute;
+        width: 50%;
+        margin-left: -60%;
+        transition: all 0.5s;
+    }
+
+    .menu ul
+    {
+        flex-direction: column;
+    }
+
+    .menu li 
+    {
+        border-top: 1px solid  rgb(240, 253, 255, 0.3);
+    }
+
+    #btn-menu:checked ~ .menu
+    {
+    margin: 0;
+    }
+}
 
 #main
 {
@@ -187,14 +153,17 @@ animation: cambiar 10s infinite;
     border-radius: 15%;
 }
 
-.descripcion{
-    background-color:rgb(9, 221, 221, .95) ;
+.descripcion
+{
+    background-color: rgb(26, 201, 224) ;
     padding: 15px;
     font-family: Calibri;
-    border: 1px solid rgb(1, 99, 138);
+    border: 20px solid rgb(1, 99, 138,);
+    margin: 20px;
 }
 
-.main{
+.main
+{
     grid-area: main;
     justify-content: center;
 }
@@ -206,7 +175,7 @@ footer
     margin-top: 15px;
     border: 1px solid rgb(1, 99, 138);;
     padding: 5px;
-    background-color: rgb(9, 221, 221);
+    background-color:  rgb(10, 186, 209);
 }
 
 
@@ -225,11 +194,11 @@ footer
     border: solid 4px black;
 }
 
-
-
 .descripcion
-{grid-area:descripcion;
+{
+    grid-area:descripcion;
 }
+
 .name-area
 {
     grid-area: name-input;
@@ -237,9 +206,9 @@ footer
     margin-top: 10px;
     border: 1px solid rgb(1, 99, 138);
     background-color:rgb(9, 221, 221) ;
-    padding: 15px;
-    
+    padding: 15px;    
 }
+
 .email-area
 {
     grid-area: email-input;
@@ -247,9 +216,10 @@ footer
     margin-top: 10px;
     border: 1px solid rgb(1, 99, 138);
     background-color: rgb(9, 221, 221) ;
-    padding: 15px;
-    
+    padding: 15px;    
 }
+
+
 .age-area
 {
     grid-area: age-area;
@@ -318,83 +288,59 @@ form
 @media (min-width: 660px)
 {   
 
- .nav-bar
- {
-    flex-direction: row;
- }
-    .nav-links
+
+    .video-container iframe
     {
-        position: relative;
+        margin-top: 15px;    
+        width: 600px;
+        height: 400px;
+    }
+
+    form
+    {
         display: flex;
-        align-items: initial;
-        flex-direction: row;
-        gap: 25px 
-    }
+        flex-wrap: wrap;
+        align-items:baseline;
+        justify-content: space-around;
 
-   nav ul li{
-width: 80px;
-    }
-    
-    
-
-   nav ul li:hover
-    {
-       width: 180px; 
     }
 
     .video-container iframe
-{
-    margin-top: 15px;    
-    width: 600px;
-    height: 400px;
-}
+    {
+        margin: 25px;
+    }
 
-form{
-   display: flex;
-   flex-wrap: wrap;
-   align-items:baseline;
-   justify-content: space-around;
-
-}
-
-.video-container iframe
-{
-    margin: 25px;
-}
-
-.fotos-container img
-{
+    .fotos-container img
+    {
     
-    margin: 40px;
-    width: 80%;
-    border: solid 8px black;
-}
+        margin: 40px;
+        width: 80%;
+        border: solid 8px black;
+    }
 
-.podcast iframe{
-    margin: 3%;
-    width: 95%;
-}
+    .podcast iframe
+    {
+        margin: 3%;
+        width: 95%;
+    }
 
-.message-area textarea
-{
-    height: 60px;
-    width: 280px;
-
-
-}
+    .message-area textarea
+    {
+        height: 60px;
+        width: 280px;
+    }
 }
 
 @media (min-width: 1330px)
-  {
-#main
 {
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "descripcion  inicio-ricardo"
-    "footer footer";
-    grid-template-columns: 200px 1000px;
-    column-gap: 100px;
-  
+    #main
+    {   
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "descripcion  inicio-ricardo"
+        "footer footer";
+        grid-template-columns: 250px 1000px;
+        column-gap: 100px;
+    }
 }
-  }
