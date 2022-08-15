@@ -1,0 +1,295 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 12px;
+  background-image: url(https://img.freepik.com/foto-gratis/textura-turquesa_95678-57.jpg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.titulo-animado {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  justify-content: center;
+  height: 50px;
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  padding-bottom: 40;
+}
+
+.titulo-animado ul {
+  list-style: none;
+  padding-left: 10 px;
+  -webkit-animation: cambiar 10s infinite;
+          animation: cambiar 10s infinite;
+}
+
+@-webkit-keyframes cambiar {
+  0% {
+    margin-top: 0%;
+  }
+  45% {
+    margin-top: 0%;
+  }
+  50% {
+    margin-top: -50px;
+  }
+  95% {
+    margin-top: -50px;
+  }
+}
+
+@keyframes cambiar {
+  0% {
+    margin-top: 0%;
+  }
+  45% {
+    margin-top: 0%;
+  }
+  50% {
+    margin-top: -50px;
+  }
+  95% {
+    margin-top: -50px;
+  }
+}
+header {
+  width: 100%;
+  font-family: calibri;
+  font-size: larger;
+}
+
+#btn-menu {
+  display: none;
+}
+
+header label {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(228, 229, 240, 0.3);
+}
+
+header Label:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul {
+  background-color: rgb(10, 186, 209);
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  border-right: 1px solid rgb(153, 231, 255);
+}
+
+.menu li:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu li a {
+  display: block;
+  padding: 15px 20px;
+  color: rgb(240, 253, 255);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  header label {
+    display: block;
+    background-color: rgb(10, 186, 209);
+  }
+  .menu {
+    position: absolute;
+    width: 50%;
+    margin-left: -60%;
+    transition: all 0.3s;
+  }
+  .menu ul {
+    flex-direction: column;
+  }
+  .menu li {
+    border-top: 1px solid rgba(240, 253, 255, 0.3);
+  }
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+  }
+}
+#main {
+  background-image: url(./images/Ricardo-trans.png);
+  background-size: 35px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.inicio-ricardo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+  border-radius: 15%;
+}
+
+.descripcion {
+  background-color: rgb(26, 201, 224);
+  padding: 15px;
+  font-family: Calibri;
+  border: 20px solid rgb(1, 99, 138);
+  margin: 20px;
+}
+
+.main {
+  grid-area: main;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+footer {
+  height: 50px;
+  grid-area: footer;
+  margin-top: 15px;
+  border: 1px solid rgb(1, 99, 138);
+  padding: 5px;
+  background-color: rgb(10, 186, 209);
+}
+
+.biografia {
+  display: flex;
+  font-family: calibri;
+  font-size: larger;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: left;
+  padding: 10px;
+}
+
+.fotos-container img {
+  width: 100%;
+  margin-bottom: 15px;
+  border: solid 4px black;
+}
+
+.descripcion {
+  grid-area: descripcion;
+}
+
+.name-area {
+  grid-area: name-input;
+  display: grid;
+  margin-top: 10px;
+  border: 1px solid rgb(1, 99, 138);
+  background-color: rgb(9, 221, 221);
+  padding: 15px;
+}
+
+.email-area {
+  grid-area: email-input;
+  display: grid;
+  margin-top: 10px;
+  border: 1px solid rgb(1, 99, 138);
+  background-color: rgb(9, 221, 221);
+  padding: 15px;
+}
+
+.age-area {
+  grid-area: age-area;
+  border: 1px solid rgb(1, 99, 138);
+  background-color: rgb(9, 221, 221);
+  padding: 15px;
+}
+
+.sex-area {
+  grid-area: sex-area;
+  border: 1px solid rgb(1, 99, 138);
+  background-color: rgb(9, 221, 221);
+  padding: 15px;
+}
+
+.message-area {
+  grid-area: message-area;
+  border: 1px solid rgb(1, 99, 138);
+  background-color: rgb(9, 221, 221);
+  padding-top: 15px;
+  display: grid;
+}
+
+.tittle-form {
+  padding: 20px;
+  background-color: rgb(9, 221, 221);
+  border: 1px solid rgb(1, 99, 138);
+  border-bottom: none;
+}
+
+form {
+  padding: 20px;
+  background-color: rgb(9, 221, 221);
+  border: 1px solid rgb(1, 99, 138);
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  grid-template-areas: "name-input    name-input" "email-input email-input" "age-area     sex-area" "message-area message-area";
+}
+
+.message-area textarea {
+  height: 60px;
+}
+
+.message-area label {
+  padding-bottom: 10px;
+}
+
+.inicio-ricardo {
+  grid-area: inicio-ricardo;
+}
+
+@media (min-width: 660px) {
+  .video-container iframe {
+    margin-top: 15px;
+    width: 600px;
+    height: 400px;
+  }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  .video-container iframe {
+    margin: 25px;
+  }
+  .fotos-container img {
+    margin: 40px;
+    width: 80%;
+    border: solid 8px black;
+  }
+  .podcast iframe {
+    margin: 3%;
+    width: 95%;
+  }
+  .message-area textarea {
+    height: 60px;
+    width: 280px;
+  }
+}
+@media (min-width: 1330px) {
+  #main {
+    display: grid;
+    grid-template-areas: "header header" "descripcion  inicio-ricardo" "footer footer";
+    grid-template-columns: 250px 1000px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+  }
+}/*# sourceMappingURL=style.css.map */
