@@ -1,0 +1,64 @@
+.name-area {
+  grid-area: name-input;
+  display: grid;
+  margin-top: 10px;
+  border: 1px solid rgb(1, 99, 138);
+  background-color: rgb(9, 221, 221);
+  padding: 15px;
+}
+
+.email-area {
+  grid-area: email-input;
+  display: grid;
+  margin-top: 10px;
+  border: 1px solid rgb(1, 99, 138);
+  background-color: rgb(9, 221, 221);
+  padding: 15px;
+}
+
+.age-area {
+  grid-area: age-area;
+  border: 1px solid rgb(1, 99, 138);
+  background-color: rgb(9, 221, 221);
+  padding: 15px;
+}
+
+.sex-area {
+  grid-area: sex-area;
+  border: 1px solid rgb(1, 99, 138);
+  background-color: rgb(9, 221, 221);
+  padding: 15px;
+}
+
+.message-area {
+  grid-area: message-area;
+  border: 1px solid rgb(1, 99, 138);
+  background-color: rgb(9, 221, 221);
+  padding-top: 15px;
+  display: grid;
+}
+
+.tittle-form {
+  padding: 20px;
+  background-color: rgb(9, 221, 221);
+  border: 1px solid rgb(1, 99, 138);
+  border-bottom: none;
+}
+
+form {
+  padding: 20px;
+  background-color: rgb(9, 221, 221);
+  border: 1px solid rgb(1, 99, 138);
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  grid-template-areas: "name-input    name-input" "email-input email-input" "age-area     sex-area" "message-area message-area";
+}
+
+.message-area textarea {
+  height: 60px;
+}
+
+.message-area label {
+  padding-bottom: 10px;
+}/*# sourceMappingURL=formulario.css.map */
