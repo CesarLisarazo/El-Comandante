@@ -1,0 +1,35 @@
+#main
+{
+    background-image: url(./images/Ricardo-trans.png);
+    background-size: 35px;
+   
+}
+
+.header
+{
+  grid-area: header;  
+}
+
+.inicio-ricardo
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    border-radius: 15%;
+    grid-area: inicio-ricardo;
+}
+.descripcion
+{
+    background-color: rgb(26, 201, 224) ;
+    padding: 15px;
+    font-family: Calibri;
+    border: 20px solid rgb(1, 99, 138,);
+    margin: 20px;
+    grid-area:descripcion;
+}
+.main
+{
+    grid-area: main;
+    justify-content: center;
+    margin-top: 10px ;
+}

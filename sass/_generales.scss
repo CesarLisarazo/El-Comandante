@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+body
+{
+    margin: 12px;
+    background-image: url(https://img.freepik.com/foto-gratis/textura-turquesa_95678-57.jpg) ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
