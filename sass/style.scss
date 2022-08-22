@@ -43,15 +43,20 @@
     }
 }
 
+@mixin sizes ($width, $height)
+{
+    width: $width;
+    height: $height;
+}
 @media (min-width: 660px)
 {   
 
 
     .video-container iframe
     {
-        margin-top: 15px;    
-        width: 600px;
-        height: 400px;
+        margin-top: 15px;   
+        @include sizes(600px,400px); 
+        
     }
 
     form
@@ -84,8 +89,8 @@
 
     .message-area textarea
     {
-        height: 60px;
-        width: 280px;
+        @include sizes(280px,60px); 
+        
     }
 }
 

@@ -4,7 +4,6 @@
     display: flex;
     position: relative;
     justify-content: center;
-    justify-content: center;
     height: 50px;
     color: rgb(0, 0, 0);
     font-size: 50px;
@@ -13,10 +12,26 @@
     padding-bottom: 40;
  ul
 {
+ 
     list-style: none;
     padding-left: 10 px;
     animation: cambiar 10s infinite;
+
+    li h1 
+    {
+        font-size: 60px;
+        
+    }
+    
+    li h2
+    {
+        font-size: 50px;
+        font-style: italic;
+    }
+
 }
+}
+
 
 @keyframes cambiar
 {
@@ -25,7 +40,7 @@
     50%{margin-top:-50px;} 
     95%{margin-top: -50px;}
 }
-}
+
 
 
 header

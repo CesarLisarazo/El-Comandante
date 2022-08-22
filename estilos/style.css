@@ -104,12 +104,15 @@ header Label:hover {
   border: solid 4px black;
 }
 
+.estilo, form, .tittle-form, .message-area, .sex-area, .age-area, .email-area, .name-area {
+  border: 1px solid rgb(1, 99, 138);
+  background-color: rgb(9, 221, 221);
+}
+
 .name-area {
   grid-area: name-input;
   display: grid;
   margin-top: 10px;
-  border: 1px solid rgb(1, 99, 138);
-  background-color: rgb(9, 221, 221);
   padding: 15px;
 }
 
@@ -117,44 +120,32 @@ header Label:hover {
   grid-area: email-input;
   display: grid;
   margin-top: 10px;
-  border: 1px solid rgb(1, 99, 138);
-  background-color: rgb(9, 221, 221);
   padding: 15px;
 }
 
 .age-area {
   grid-area: age-area;
-  border: 1px solid rgb(1, 99, 138);
-  background-color: rgb(9, 221, 221);
   padding: 15px;
 }
 
 .sex-area {
   grid-area: sex-area;
-  border: 1px solid rgb(1, 99, 138);
-  background-color: rgb(9, 221, 221);
   padding: 15px;
 }
 
 .message-area {
   grid-area: message-area;
-  border: 1px solid rgb(1, 99, 138);
-  background-color: rgb(9, 221, 221);
   padding-top: 15px;
   display: grid;
 }
 
 .tittle-form {
   padding: 20px;
-  background-color: rgb(9, 221, 221);
-  border: 1px solid rgb(1, 99, 138);
   border-bottom: none;
 }
 
 form {
   padding: 20px;
-  background-color: rgb(9, 221, 221);
-  border: 1px solid rgb(1, 99, 138);
   display: grid;
   justify-content: center;
   gap: 30px;
@@ -173,7 +164,6 @@ form {
   display: flex;
   position: relative;
   justify-content: center;
-  justify-content: center;
   height: 50px;
   color: rgb(0, 0, 0);
   font-size: 50px;
@@ -187,6 +177,14 @@ form {
   -webkit-animation: cambiar 10s infinite;
           animation: cambiar 10s infinite;
 }
+.titulo-animado ul li h1 {
+  font-size: 60px;
+}
+.titulo-animado ul li h2 {
+  font-size: 50px;
+  font-style: italic;
+}
+
 @-webkit-keyframes cambiar {
   0% {
     margin-top: 0%;
@@ -201,6 +199,7 @@ form {
     margin-top: -50px;
   }
 }
+
 @keyframes cambiar {
   0% {
     margin-top: 0%;
@@ -215,7 +214,6 @@ form {
     margin-top: -50px;
   }
 }
-
 header {
   width: 100%;
   font-family: calibri;
@@ -263,9 +261,9 @@ footer {
   height: 50px;
   grid-area: footer;
   margin-top: 15px;
-  border: 1px solid rgb(1, 99, 138);
   padding: 5px;
-  background-color: rgb(10, 186, 209);
+  background-color: rgb(29, 195, 218);
+  border: 2px solid rgb(25, 160, 201);
 }
 
 @media (max-width: 768px) {
@@ -314,8 +312,8 @@ footer {
     width: 95%;
   }
   .message-area textarea {
-    height: 60px;
     width: 280px;
+    height: 60px;
   }
 }
 @media (min-width: 1330px) {

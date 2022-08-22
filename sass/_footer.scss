@@ -1,11 +1,17 @@
+$paleta:(
+    primario: rgb(29, 195, 218),
+    secundario:rgb(25, 160, 201),
+);
+
 
 footer 
 {
     height: 50px;
     grid-area: footer;
     margin-top: 15px;
-    border: 1px solid rgb(1, 99, 138);;
     padding: 5px;
-    background-color:  rgb(10, 186, 209);
+    background-color:  map-get($paleta, primario);
+    border: 2px solid map-get($paleta, secundario);
+    
 }
 
