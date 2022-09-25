@@ -9,21 +9,23 @@ let precio_dolar_oficial = 150
 
 let nombre_producto_1 = "MATE"
 let precio_producto_1 = 4 * precio_dolar_oficial
-le150tock_producto_1 = 50
+let stock_producto_1 = 50
 
 let nombre_producto_2 = "CUADRO"
 let precio_producto_2 = 6 * precio_dolar_oficial
-le150tock_producto_2 = 50
+let stock_producto_2 = 50
 
 let nombre_producto_3 = "RETRATO"
 let precio_producto_3 = 10 * precio_dolar_oficial
-le150tock_producto_3 = 50
+let stock_producto_3 = 50
 
 
 let precioTotal = 0
 
 
-alert("Estos son nuestros productos \n- " + nombre_producto_1 + "\n- " + nombre_producto_2 + "\n- " + nombre_producto_3)
+alert("Estos son nuestros productos:\n- " + nombre_producto_1 + " a $" + precio_producto_1 + "\n- " + nombre_producto_2 + " a $" + precio_producto_2 + "\n- " + nombre_producto_3 + " a $" + precio_producto_3)
+
+
 let cantidadCompra = prompt("¿Que cantidad de distintos productos desea comprar? (ingrese 1, 2 o 3)")
 
 if(cantidadCompra <=3)
@@ -107,6 +109,6 @@ if(cantidadCompra <=3)
 
 else
 {
-    alert("Solo tenemos estos 3 productos a la venta \n - " + nombre_producto_1 + "\n- " + nombre_producto_2 + "\n-" + nombre_producto_3)
+    alert("Solo tenemos estos 3 productos a la venta \n - " + nombre_producto_1 + "\n- " + nombre_producto_2 + "\n- " + nombre_producto_3)
 }
 
