@@ -1,0 +1,110 @@
+@import "fuentes";
+@import "generales";
+@import "menu";
+@import "index";
+@import "biografia";
+@import "fotos";
+@import "contacto";
+@import "header";
+@import "footer";
+@import "tienda";
+
+
+
+@media (max-width:768px)
+{
+    header label
+    {
+        display: block;
+        background-color: rgb(10, 186, 209);
+    }
+
+    .menu
+    {
+        position: absolute;
+        width: 50%;
+        margin-left: -60%;
+        transition: all 0.3s;
+    ul
+        {
+            flex-direction: column;
+        } 
+    }
+
+
+
+    .menu li 
+    {
+        border-top: 1px solid  rgb(240, 253, 255, 0.3);
+    }
+
+    #btn-menu:checked ~ .menu
+    {
+    margin: 0;
+    }
+}
+
+@mixin sizes ($width, $height)
+{
+    width: $width;
+    height: $height;
+}
+@media (min-width: 660px)
+{   
+
+
+    .video-container iframe
+    {
+        margin-top: 15px;   
+        @include sizes(600px,400px); 
+        
+    }
+
+    form
+    {
+        display: flex;
+        flex-wrap: wrap;
+        align-items:baseline;
+        justify-content: space-around;
+
+    }
+
+    .video-container iframe
+    {
+        margin: 25px;
+    }
+
+    .fotos-container img
+    {
+    
+        margin: 40px;
+        width: 80%;
+        border: solid 8px black;
+    }
+
+    .podcast iframe
+    {
+        margin: 3%;
+        width: 95%;
+    }
+
+    .message-area textarea
+    {
+        @include sizes(280px,60px); 
+        
+    }
+}
+
+@media (min-width: 1330px)
+{
+    #main
+    {   
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "descripcion  inicio-ricardo"
+        "footer footer";
+        grid-template-columns: 250px 1000px;
+        column-gap: 100px;
+    }
+}

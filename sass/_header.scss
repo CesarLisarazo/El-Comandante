@@ -1,0 +1,107 @@
+
+.titulo-animado
+{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    line-height: 50px;
+    overflow: hidden ;
+    padding-bottom: 40;
+ ul
+{
+ 
+    list-style: none;
+    padding-left: 10px;
+    animation: cambiar 10s infinite;
+
+    li h1 
+    {
+        font-size: 61px;
+        
+        
+    }
+    
+    li h2
+    {
+        font-size: 50px;
+        font-style: italic;
+        
+    }
+
+}
+}
+
+
+@keyframes cambiar
+{
+    0%{ margin-top: 0%;}
+    45%{margin-top: 0%;}
+    50%{margin-top:-50px;} 
+    95%{margin-top: -50px;}
+}
+
+
+
+header
+{
+    width:100%;
+    font-family: calibri;
+    font-size: larger;
+ label 
+{
+    display: none;
+    width:50px;
+    height:50px;
+    border:1px solid rgb(228, 229, 240, 0.3);
+}
+}
+
+
+#btn-menu
+{
+  display: none;
+}
+
+
+header Label:hover
+{
+    cursor:pointer;
+    background:rgba(0,0,0,0.3);  
+}
+
+.menu ul
+{
+    background-color: rgb(10, 186, 209);
+    margin:0;
+    list-style:none;
+    padding:0;
+    display: flex;
+}
+
+
+.menu li
+{
+    border-right: 1px solid rgb(153, 231, 255);
+    .a
+    {
+        display: block;
+        padding: 15px 20px;
+        color: rgb(240, 253, 255);
+        text-decoration: none;
+    }
+
+
+
+}
+
+
+
+
+.menu li:hover
+{
+  background:rgba(0,0,0,0.3);
+}
+

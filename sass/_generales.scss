@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+body
+{
+    margin: 12px;
+    background:linear-gradient(45deg,rgb(9, 221, 221), rgb(26, 201, 224),
+    rgb(120, 215, 253),rgb(1, 99, 138,));
+background-size:100%100%;
+position:relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

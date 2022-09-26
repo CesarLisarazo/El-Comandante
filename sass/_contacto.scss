@@ -1,0 +1,82 @@
+
+.estilo
+{
+    border: 1px solid rgb(1, 99, 138);
+    background-color:rgb(9, 221, 221) ;
+}
+
+.name-area
+{
+    grid-area: name-input;
+    display: grid;
+    margin-top: 10px;
+    @extend .estilo;
+    padding: 15px;    
+}
+
+.email-area
+{
+    grid-area: email-input;
+    display: grid;
+    margin-top: 10px;
+    @extend .estilo;
+    padding: 15px;    
+}
+
+
+.age-area
+{
+    grid-area: age-area;
+    @extend .estilo;
+    padding: 15px;
+}
+
+
+.sex-area
+{
+    grid-area: sex-area;
+    @extend .estilo;
+    padding: 15px;
+}
+
+.message-area
+{
+    grid-area: message-area;
+    @extend .estilo;
+    padding-top: 15px;
+    display: grid;
+}
+
+.tittle-form
+{
+    padding: 20px;
+    @extend .estilo;
+    border-bottom: none;
+}
+
+form
+{
+    padding: 20px;
+    @extend .estilo;
+    display: grid;
+    justify-content: center;
+    gap:30px;
+    grid-template-areas:
+    "name-input    name-input"
+    "email-input email-input"
+    "age-area     sex-area"
+    "message-area message-area";
+}
+
+
+.message-area textarea
+{
+    height: 60px;
+}
+
+.message-area label
+{
+    padding-bottom: 10px;
+}
+
+
