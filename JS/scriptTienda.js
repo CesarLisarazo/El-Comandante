@@ -29,7 +29,7 @@ alert("Estos son nuestros productos:\n- " + nombre_producto_1 + " a $" + precio_
 
 let cantidadCompra = prompt("¿Que cantidad de distintos productos desea comprar? Actualmente contamos con " + cantidad_de_productos + " distintos productos en stock")
 
-if(cantidadCompra <=3)
+if(cantidadCompra <= cantidad_de_productos)
 {
     for(let i=0; i< cantidadCompra; i= i+1)
     {
