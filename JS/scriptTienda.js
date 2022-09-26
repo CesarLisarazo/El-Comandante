@@ -52,7 +52,7 @@ if(cantidadCompra <= cantidad_de_productos)
 
         }
 
-        else if(productoCompra.toUpperCase() == nombre_producto_2)
+        else if(productoCompra.toLowerCase() == nombre_producto_2)
         {
             let cantidad_producto_2 = prompt("Ingrese la cantidad de " + nombre_producto_2 + "s que desea comprar:")
                 
@@ -67,7 +67,7 @@ if(cantidadCompra <= cantidad_de_productos)
             }
         }
         
-        else if(productoCompra.toUpperCase() == nombre_producto_3)
+        else if(productoCompra.toLowerCase() == nombre_producto_3)
         {
             let cantidad_producto_3 = prompt("Ingrese la cantidad de " + nombre_producto_3 + "s que desea comprar:")
             
