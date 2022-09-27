@@ -1,8 +1,4 @@
 
-//mostrar dos productos
-//preguntar si quiere comprar
-//que cantidad
-//precio de compra
 
 
 let precio_dolar_oficial = 150
