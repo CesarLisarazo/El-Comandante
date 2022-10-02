@@ -45,7 +45,7 @@ function calculo_stock (cantidad_productos, stock_producto, precio_producto)
 alert("Estos son nuestros productos:\n- " + nombre_producto_1 + " a $" + precio_producto_1 + "\n- " + nombre_producto_2 + " a $" + precio_producto_2 + "\n- " + nombre_producto_3 + " a $" + precio_producto_3)
 
 
-let cantidadCompra = prompt("¿Que cantidad de distintos productos desea comprar? Actualmente contamos con " + cantidad_de_productos + " distintos productos en stock")
+let cantidadCompra =parseInt(prompt("¿Que cantidad de distintos productos desea comprar? Actualmente contamos con " + cantidad_de_productos + " distintos productos en stock"))
 
 if(cantidadCompra <= cantidad_de_productos)
 {
