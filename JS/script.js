@@ -54,4 +54,30 @@ for(let i=1; i<=10; i=i+1)
 
 */
 
- 
+ function calculadora (primerNumero, segundoNumero, operacion)
+ {
+    switch(operacion)
+    {
+        case "+":
+        return primerNumero + segundoNumero;
+
+        case "-":
+        return primerNumero - segundoNumero;
+
+        case "/":
+        return primerNumero / segundoNumero;
+        
+        case "*":
+        return primerNumero * segundoNumero;
+        
+        default:
+        return 0;
+    }
+ }
+
+let primer = parseInt(prompt ("ingrese un numero"))
+let operac = prompt ("Ingrese operacion")
+let segundo = parseInt(prompt  ("Ingrese otro numero"))
+
+
+alert (calculadora (primer, segundo, operac)) 

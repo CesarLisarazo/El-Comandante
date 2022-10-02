@@ -1,4 +1,4 @@
-
+//para no tener que actualizar el precio de los productos cada mes solo actualizo el precio del dollar
 
 
 let precio_dolar_oficial = 150
@@ -17,7 +17,29 @@ let stock_producto_3 = 50
 
 let cantidad_de_productos = 3
 
-let precioTotal = 0
+let precio_total = 0
+
+
+
+function calculo_precio(cantidad_producto, precio_producto)
+{
+    precio_total += cantidad_producto * precio_producto
+}
+
+function calculo_stock (cantidad_productos, stock_producto, precio_producto)
+{
+    if(cantidad_productos <= stock_producto)
+    {
+    calculo_precio (cantidad_productos, precio_producto)
+    }
+
+    else
+    {
+    alert("Actualmente solo contamos con " + stock_producto + " unidades en stock")
+    }
+}
+
+
 
 
 alert("Estos son nuestros productos:\n- " + nombre_producto_1 + " a $" + precio_producto_1 + "\n- " + nombre_producto_2 + " a $" + precio_producto_2 + "\n- " + nombre_producto_3 + " a $" + precio_producto_3)
@@ -36,15 +58,7 @@ if(cantidadCompra <= cantidad_de_productos)
         {
             let cantidad_producto_1 = prompt("Ingrese la cantidad de " + nombre_producto_1 + "s que desea comprar:")
                 
-            if(cantidad_producto_1 <= stock_producto_1)
-            {
-            precioTotal = precioTotal + (cantidad_producto_1 * precio_producto_1)
-            }
-
-            else
-            {
-            alert("Actualmente solo contamos con " + stock_producto_1 + " unidades en stock")
-            }
+       calculo_stock(cantidad_producto_1, stock_producto_1, precio_producto_1)
 
         }
 
@@ -52,30 +66,14 @@ if(cantidadCompra <= cantidad_de_productos)
         {
             let cantidad_producto_2 = prompt("Ingrese la cantidad de " + nombre_producto_2 + "s que desea comprar:")
                 
-            if(cantidad_producto_2 <= stock_producto_2)
-            {
-            precioTotal = precioTotal + (cantidad_producto_2 * precio_producto_2)
-            }
-
-            else
-            {
-            alert("Actualmente solo contamos con " + stock_producto_2 + " unidades en stock")
-            }
+       calculo_stock (cantidad_producto_2, stock_producto_2, precio_producto_2)
         }
         
         else if(productoCompra.toLowerCase() == nombre_producto_3)
         {
             let cantidad_producto_3 = prompt("Ingrese la cantidad de " + nombre_producto_3 + "s que desea comprar:")
             
-            if(cantidad_producto_3 <= stock_producto_3)
-            {
-            precioTotal = precioTotal + (cantidad_producto_3 * precio_producto_3)
-            }
-              
-            else
-            {
-            alert("Actualmente solo contamos con " + stock_producto_3 + " unidades en stock")
-            }
+          calculo_stock(cantidad_producto_3, stock_producto_3, precio_producto_3)
         }       
 
         else
@@ -85,9 +83,9 @@ if(cantidadCompra <= cantidad_de_productos)
                
     }
   
-    if (precioTotal != 0)
+    if (precio_total != 0)
     {
-    alert("El precio total es: $" + precioTotal)
+    alert("El precio total es: $" + precio_total)
     }
 }
 
