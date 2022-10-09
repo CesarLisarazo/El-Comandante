@@ -52,7 +52,7 @@ for(let i=1; i<=10; i=i+1)
     alert("El número es " + i)
 }
 
-*/
+
 
  function calculadora (primerNumero, segundoNumero, operacion)
  {
@@ -81,3 +81,13 @@ let segundo = parseInt(prompt  ("Ingrese otro numero"))
 
 
 alert (calculadora (primer, segundo, operac)) 
+*/
+
+
+
+let listaNumeros= [0, 1, 2,]
+
+let nombre = prompt("Ingrese un numero")
+listaNumeros.unshift(nombre)
+alert (listaNumeros)
+
